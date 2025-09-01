@@ -31,6 +31,9 @@
     'company': 'Cybrosys Techno Solutions',
     'website': "http://www.openhrms.com",
     'depends': ['base_setup', 'hr_attendance'],
+    'external_dependencies': {
+        'python': ['requests']
+    },
     'data': [
         'security/ir.model.access.csv',
         'views/zk_machine_view.xml',
