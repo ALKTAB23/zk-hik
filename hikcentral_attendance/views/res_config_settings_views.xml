@@ -49,6 +49,46 @@
                                 <label for="hik_timezone" string="Timezone"/>
                             </div>
                         </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="hik_auth_type"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="hik_auth_type" string="Auth Type"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="hik_username"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="hik_username" string="Username"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="hik_password" password="True"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="hik_password" string="Password/Token"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-12 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="hik_endpoint_path" placeholder="/ISAPI/AccessControl/AcsEvent?format=json"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="hik_endpoint_path" string="Attendance Endpoint Path"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="hik_page_size"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="hik_page_size" string="Page Size"/>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </xpath>
