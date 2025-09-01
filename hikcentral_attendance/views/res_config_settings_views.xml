@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_hik" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.hik</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.view_res_config_settings"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')][last()]" position="inside">
+                <div class="app_settings_block" data-string="HikCentral" string="HikCentral" data-key="hikcentral" groups="base.group_system">
+                    <h2>HikCentral Integration</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="hik_base_url" placeholder="https://hik.example.com"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="hik_base_url" string="HikCentral Base URL"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="hik_app_key"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="hik_app_key" string="App Key"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="hik_app_secret" password="True"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="hik_app_secret" string="App Secret"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="hik_timeout"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="hik_timeout" string="Timeout (seconds)"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="hik_timezone"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="hik_timezone" string="Timezone"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

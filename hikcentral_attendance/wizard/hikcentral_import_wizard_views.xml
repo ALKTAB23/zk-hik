@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hik_import_wizard_form" model="ir.ui.view">
+        <field name="name">hik.import.wizard.form</field>
+        <field name="model">hik.import.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Import Attendance from HikCentral">
+                <group>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                </group>
+                <footer>
+                    <button string="Import" type="object" name="action_import" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_hik_import_wizard" model="ir.actions.act_window">
+        <field name="name">Import from HikCentral</field>
+        <field name="res_model">hik.import.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_hik_import" name="Import by Date Range" parent="menu_hik_root" action="action_hik_import_wizard" sequence="5"/>
+</odoo>

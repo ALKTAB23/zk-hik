@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hik_import_log_tree" model="ir.ui.view">
+        <field name="name">hik.import.log.tree</field>
+        <field name="model">hik.import.log</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="create_date"/>
+                <field name="date_from"/>
+                <field name="date_to"/>
+                <field name="status"/>
+                <field name="created"/>
+                <field name="skipped"/>
+                <field name="message"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hik_import_logs" model="ir.actions.act_window">
+        <field name="name">Hik Import Logs</field>
+        <field name="res_model">hik.import.log</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem id="menu_hik_root" name="HikCentral" parent="hr_attendance.menu_hr_attendance_root" sequence="60"/>
+    <menuitem id="menu_hik_logs" name="Import Logs" parent="menu_hik_root" action="action_hik_import_logs" sequence="10"/>
+</odoo>
